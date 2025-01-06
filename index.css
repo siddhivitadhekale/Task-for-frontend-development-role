@@ -300,7 +300,8 @@ nav a {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-  width: 450px;
+  flex-wrap: wrap;
+  flex-basis: 20rem;
 }
 .footer-heading {
   font-size: 1.3rem;
@@ -424,6 +425,10 @@ nav a {
     margin: 0px auto;
     border: none;
   }
+  .section {
+    margin-inline: 0.5rem;
+    padding: 0;
+  }
   .header {
     max-width: 70em;
   }
@@ -461,10 +466,14 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-inline: -3rem;
   }
   .card {
     height: 100%;
     width: 100%;
+    flex-basis: content;
+    padding: 1.5rem;
+    overflow: hidden;
   }
   .footer {
     flex-direction: column;
@@ -474,9 +483,15 @@ nav a {
   }
   .footer-info {
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 0.4rem;
     justify-content: center;
-    width: none;
     padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    max-width: 72rem;
   }
 }
